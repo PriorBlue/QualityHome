@@ -571,7 +571,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 300, y: 32}
+  m_Size: {x: 600, y: 32}
   m_EdgeRadius: 0
 --- !u!1001 &699498355795654053
 PrefabInstance:
@@ -1181,32 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
-        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103615136308667807, guid: 61f17b1f9adad7643a35a9957ed20bea,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7958698142737906952, guid: 61f17b1f9adad7643a35a9957ed20bea,
