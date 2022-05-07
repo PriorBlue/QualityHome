@@ -115,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.000030517578, y: 0.07733154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -126,7 +126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 68, y: 64}
+  m_Size: {x: 56.86847, y: 31.996948}
   m_EdgeRadius: 0
 --- !u!50 &839022190376760991
 Rigidbody2D:
@@ -163,7 +163,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 598.5, y: 349}
+  m_Target: {x: 960, y: 540}
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 1
