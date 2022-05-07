@@ -21,6 +21,8 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         lastSpawn = Time.time;
+
+        SpawnTile();
     }
 
     private void Update()
@@ -29,13 +31,18 @@ public class Spawner : MonoBehaviour
         {
             lastSpawn = Time.time;
 
-            randTile = Tiles[Random.Range(0, Tiles.Count)];
-            randPosition = new Vector3(Random.Range(-Size.x, Size.x), Random.Range(-Size.y, Size.y), 0f);
-
-            var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
-
-            tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
+            SpawnTile();
         }
+    }
+
+    private void SpawnTile()
+    {
+        randTile = Tiles[Random.Range(0, Tiles.Count)];
+        randPosition = new Vector3(Random.Range(-Size.x, Size.x), Random.Range(-Size.y, Size.y), 0f);
+
+        var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
+
+        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
     }
 
     private void OnDrawGizmos()

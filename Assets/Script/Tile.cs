@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("References")]
     public Image Image;
     public RectTransform Rect;
     public Rigidbody2D Body;
     public TargetJoint2D Target;
+    public Outline Outline;
 
     [Header("Settings")]
     public float FadeIn = 1f;
@@ -39,6 +40,11 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             Body = GetComponent<Rigidbody2D>();
         }
+
+        if (Outline == null)
+        {
+            Outline = GetComponent<Outline>();
+        }
     }
 
     private void Start()
@@ -48,6 +54,8 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Image.color = new Color(1f, 1f, 1f, 0f);
 
         Target.enabled = false;
+
+        Outline.enabled = false;
     }
 
     private void FixedUpdate()
@@ -55,6 +63,15 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (isDragging)
         {
             Target.target = Input.mousePosition;
+        }
+
+        if (Body.angularVelocity > MaxAngularMagnitude)
+        {
+            Body.angularVelocity = MaxAngularMagnitude;
+        }
+        else if (Body.angularVelocity < -MaxAngularMagnitude)
+        {
+            Body.angularVelocity = -MaxAngularMagnitude;
         }
     }
 
@@ -96,9 +113,19 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             Body.velocity = Body.velocity.normalized * MaxMagnitude;
         }
 
-        if (Body.angularVelocity > MaxAngularMagnitude)
+        Outline.enabled = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Outline.enabled = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (isDragging == false)
         {
-            Body.angularVelocity = MaxAngularMagnitude;
+            Outline.enabled = false;
         }
     }
 }
