@@ -17,16 +17,14 @@ MonoBehaviour:
   Description: 'Your goal is simple: build a home. First the fundament, then the
     base and then the roof.  Drag & Drop the objects from left to right.  But beware
     the process might not be as simple as you think.'
+  Delay: 1
   Categories:
-  - Category: {fileID: 11400000, guid: 71cd6173eba2ed945aed1bd71e1fcfd6, type: 2}
-    MinCount: 4
-    MaxCount: 6
-  - Category: {fileID: 11400000, guid: 0bf5fb1833e6d734ca3d5a5411aa0604, type: 2}
-    MinCount: 4
-    MaxCount: 6
   - Category: {fileID: 11400000, guid: 8472c01d99b5cbe4fa137f5bd5c36aac, type: 2}
-    MinCount: 4
-    MaxCount: 6
+    MinCount: 3
+    MaxCount: 5
   - Category: {fileID: 11400000, guid: e2e46bad333bc5543a239c2d813e74b7, type: 2}
-    MinCount: 4
-    MaxCount: 6
+    MinCount: 3
+    MaxCount: 5
+  - Category: {fileID: 11400000, guid: 14fc028d219616d4c86221d559b15d77, type: 2}
+    MinCount: 2
+    MaxCount: 4

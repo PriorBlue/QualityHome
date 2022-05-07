@@ -13,28 +13,25 @@ MonoBehaviour:
   m_Name: MainPhase
   m_EditorClassIdentifier: 
   Name: Main Hall
+  Title: 
+  Description: 
+  Delay: 1
   Categories:
   - Category: {fileID: 11400000, guid: 71cd6173eba2ed945aed1bd71e1fcfd6, type: 2}
-    MinCount: 2
-    MaxCount: 5
+    MinCount: 5
+    MaxCount: 7
   - Category: {fileID: 11400000, guid: 5ab83ef6e8068a944b9a6d1560247b53, type: 2}
     MinCount: 1
     MaxCount: 1
-  - Category: {fileID: 11400000, guid: 0bf5fb1833e6d734ca3d5a5411aa0604, type: 2}
-    MinCount: 2
-    MaxCount: 6
   - Category: {fileID: 11400000, guid: fe9ee4d588af8014d8698820994cf893, type: 2}
-    MinCount: 2
-    MaxCount: 4
-  - Category: {fileID: 11400000, guid: e2e46bad333bc5543a239c2d813e74b7, type: 2}
-    MinCount: 2
-    MaxCount: 6
+    MinCount: 1
+    MaxCount: 3
   - Category: {fileID: 11400000, guid: 14fc028d219616d4c86221d559b15d77, type: 2}
     MinCount: 2
-    MaxCount: 6
+    MaxCount: 3
   - Category: {fileID: 11400000, guid: 64322d369ec6ffe49b983a6fe8b2a685, type: 2}
     MinCount: 2
-    MaxCount: 6
+    MaxCount: 4
   - Category: {fileID: 11400000, guid: a20a0ce67be9d394290c06d7ba71a50e, type: 2}
-    MinCount: 2
-    MaxCount: 6
+    MinCount: 3
+    MaxCount: 4
