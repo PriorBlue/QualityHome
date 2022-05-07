@@ -53,13 +53,20 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   PhaseName: {fileID: 0}
   PhaseCounter: {fileID: 0}
-  RateButton: {fileID: 0}
   Title: {fileID: 0}
   Description: {fileID: 0}
   AreaEffector: {fileID: 0}
-  Audio: {fileID: 2054517589169848472}
+  Music: {fileID: 2054517589169848472}
+  Sound: {fileID: 0}
+  Border: {fileID: 0}
+  RateButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  Popup: {fileID: 0}
   Size: {x: 75, y: 120}
   Delay: 0.2
+  SpawnSound:
+  - {fileID: 8300000, guid: 178eab8896544c54f8614b94794c1ccd, type: 3}
+  - {fileID: 8300000, guid: f76fb67432813ad47b0e9df19ade6556, type: 3}
   Phases:
   - Phase: {fileID: 11400000, guid: 58ffabd17013fc545aec4ee468aeda98, type: 2}
   - Phase: {fileID: 11400000, guid: 68fd0eed413ec44409af407c58b38d5c, type: 2}
@@ -83,7 +90,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

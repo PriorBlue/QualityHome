@@ -12,6 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba31ed3111d90b54780e925726b67580, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
+  PickupSound:
+  - {fileID: 8300000, guid: 134407d6944c4e84f882fb5c145329e9, type: 3}
+  - {fileID: 8300000, guid: f24234178e9589648a6851445fcba981, type: 3}
+  - {fileID: 8300000, guid: c3bd9baf61f0c5d44a61ebc777a77fc7, type: 3}
+  - {fileID: 8300000, guid: 585c2d499d70daf41a92f23396472012, type: 3}
+  - {fileID: 8300000, guid: 49187ffaacd4b14459ff87ddc1d0857a, type: 3}
+  DropSound:
+  - {fileID: 8300000, guid: 5e58a3ccb230f3f43bee277342767ec6, type: 3}
+  - {fileID: 8300000, guid: 0a89fccb376a5ed439ae89c905b85db1, type: 3}
+  - {fileID: 8300000, guid: 70e6adef5e3dd704d936b61b9f576818, type: 3}
+  WooshSound:
+  - {fileID: 8300000, guid: b8c5fda4828694d49a4c53ac6a751e75, type: 3}
+  - {fileID: 8300000, guid: 2f3359b3e8921734bb2c3b2b0a1aa463, type: 3}
+  - {fileID: 8300000, guid: f42f0eb384ca3b84b9d43586207c8c22, type: 3}
   Tiles:
   - {fileID: -3746276157287144226, guid: 2a05c3b40d33df84a9a559217191ed86, type: 3}
   - {fileID: -3746276157287144226, guid: 444bb513be17ee7489bbd19fee5dda76, type: 3}

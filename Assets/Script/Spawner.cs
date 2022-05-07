@@ -16,7 +16,8 @@ public class Spawner : MonoBehaviour
     public TextMeshProUGUI Title;
     public TextMeshProUGUI Description;
     public AreaEffector2D AreaEffector;
-    public AudioSource Audio;
+    public AudioSource Music;
+    public AudioSource Sound;
     public GameObject Border;
 
     public Button RateButton;
@@ -26,6 +27,7 @@ public class Spawner : MonoBehaviour
     [Header("Settings")]
     public Vector2 Size;
     public float Delay = 5f;
+    public List<AudioClip> SpawnSound = new List<AudioClip>();
 
     [Header("Tiles")]
     public List<PhaseInfo> Phases = new List<PhaseInfo>();
@@ -175,13 +177,19 @@ public class Spawner : MonoBehaviour
 
         if (Phases[currPhase].Phase.Sound != null)
         {
-            Audio.Stop();
-            Audio.clip = Phases[currPhase].Phase.Sound;
-            Audio.Play();
+            Music.Stop();
+            Music.clip = Phases[currPhase].Phase.Sound;
+            Music.Play();
         }
         else
         {
-            Audio.Stop();
+            Music.Stop();
+        }
+
+        if (Phases[currPhase].Phase.Categories.Count >= 1)
+        {
+            Sound.clip = SpawnSound[Random.Range(0, SpawnSound.Count)];
+            Sound.Play();
         }
     }
 
@@ -194,16 +202,18 @@ public class Spawner : MonoBehaviour
         randTile = randCategory.Category.Tiles[Random.Range(0, randCategory.Category.Tiles.Count)];
         randPosition = new Vector3(Random.Range(-Size.x, Size.x), Random.Range(-Size.y, Size.y), 0f);
 
-        if (randCategory.tilesLeft <= 0)
-        {
-            categories.Remove(randCategory);
-        }
-
         var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
 
         tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
 
+        tile.Category = randCategory.Category;
+
         tiles.Add(tile);
+
+        if (randCategory.tilesLeft <= 0)
+        {
+            categories.Remove(randCategory);
+        }
     }
 
     private void OnDrawGizmos()

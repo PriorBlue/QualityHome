@@ -12,5 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba31ed3111d90b54780e925726b67580, type: 3}
   m_Name: Chimney
   m_EditorClassIdentifier: 
+  PickupSound:
+  - {fileID: 8300000, guid: 134407d6944c4e84f882fb5c145329e9, type: 3}
+  - {fileID: 8300000, guid: f24234178e9589648a6851445fcba981, type: 3}
+  - {fileID: 8300000, guid: c3bd9baf61f0c5d44a61ebc777a77fc7, type: 3}
+  - {fileID: 8300000, guid: 585c2d499d70daf41a92f23396472012, type: 3}
+  - {fileID: 8300000, guid: 49187ffaacd4b14459ff87ddc1d0857a, type: 3}
+  DropSound:
+  - {fileID: 8300000, guid: 7b53f66beaafc5d4997de620594dbf2d, type: 3}
+  - {fileID: 8300000, guid: 20caa5dcd0748a74298c2aef102947ff, type: 3}
+  - {fileID: 8300000, guid: d2a4bf3ae4213f54cb50cb0e783ed19b, type: 3}
+  WooshSound:
+  - {fileID: 8300000, guid: b8c5fda4828694d49a4c53ac6a751e75, type: 3}
+  - {fileID: 8300000, guid: 2f3359b3e8921734bb2c3b2b0a1aa463, type: 3}
+  - {fileID: 8300000, guid: f42f0eb384ca3b84b9d43586207c8c22, type: 3}
   Tiles:
   - {fileID: 5735699784242987583, guid: c0e54e121fb46c742821e830b658162b, type: 3}

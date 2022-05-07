@@ -12,6 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba31ed3111d90b54780e925726b67580, type: 3}
   m_Name: Concrete
   m_EditorClassIdentifier: 
+  PickupSound:
+  - {fileID: 8300000, guid: 134407d6944c4e84f882fb5c145329e9, type: 3}
+  - {fileID: 8300000, guid: f24234178e9589648a6851445fcba981, type: 3}
+  - {fileID: 8300000, guid: c3bd9baf61f0c5d44a61ebc777a77fc7, type: 3}
+  - {fileID: 8300000, guid: 585c2d499d70daf41a92f23396472012, type: 3}
+  - {fileID: 8300000, guid: 49187ffaacd4b14459ff87ddc1d0857a, type: 3}
+  DropSound:
+  - {fileID: 8300000, guid: 7c17ee45d0d59a44abb38a64f414a5b1, type: 3}
+  - {fileID: 8300000, guid: 9bd298a61e578c74c8579b5e201d3f3e, type: 3}
+  - {fileID: 8300000, guid: 4c7073b976d68434ea9881595a71fa0c, type: 3}
+  WooshSound:
+  - {fileID: 8300000, guid: b8c5fda4828694d49a4c53ac6a751e75, type: 3}
+  - {fileID: 8300000, guid: 2f3359b3e8921734bb2c3b2b0a1aa463, type: 3}
+  - {fileID: 8300000, guid: f42f0eb384ca3b84b9d43586207c8c22, type: 3}
   Tiles:
   - {fileID: -3746276157287144226, guid: 7081f4cf2f9199c4ba042da1bd8962a3, type: 3}
   - {fileID: -3746276157287144226, guid: 1296780135765264fb180232ad1935a1, type: 3}

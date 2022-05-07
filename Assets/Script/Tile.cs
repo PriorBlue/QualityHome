@@ -6,12 +6,16 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [HideInInspector]
+    public CategoryData Category;
+
     [Header("References")]
     public Image Image;
     public RectTransform Rect;
     public Rigidbody2D Body;
     public TargetJoint2D Target;
     public Outline Outline;
+    public AudioSource Audio;
 
     [Header("Settings")]
     public float FadeIn = 1f;
@@ -74,6 +78,12 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         {
             Body.angularVelocity = -MaxAngularMagnitude;
         }
+
+        if (isDragging && Body.velocity.magnitude >= 1000f && Audio.isPlaying == false)
+        {
+            Audio.clip = Category.WooshSound[Random.Range(0, Category.WooshSound.Count)];
+            Audio.Play();
+        }
     }
 
     private void Update()
@@ -105,6 +115,12 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
         Target.anchor = result;
         Target.enabled = true;
+
+        if (Category.PickupSound.Count >= 1)
+        {
+            Audio.clip = Category.PickupSound[Random.Range(0, Category.PickupSound.Count)];
+            Audio.Play();
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -127,6 +143,12 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (isOver == false)
         {
             Outline.enabled = false;
+        }
+
+        if (Category.DropSound.Count >= 1)
+        {
+            Audio.clip = Category.DropSound[Random.Range(0, Category.DropSound.Count)];
+            Audio.Play();
         }
     }
 

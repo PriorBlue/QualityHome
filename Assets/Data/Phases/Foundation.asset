@@ -20,7 +20,7 @@ MonoBehaviour:
   ShowPopup: 0
   WindStrength: 0
   Delay: 1
-  Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
+  Sound: {fileID: 8300000, guid: 2c4ddfccfdab3fa469eb873b9c238bf9, type: 3}
   BakeTiles: 0
   Categories:
   - Category: {fileID: 11400000, guid: 8472c01d99b5cbe4fa137f5bd5c36aac, type: 2}
