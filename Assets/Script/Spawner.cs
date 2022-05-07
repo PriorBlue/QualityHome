@@ -12,11 +12,15 @@ public class Spawner : MonoBehaviour
     public Transform Canvas;
     public TextMeshProUGUI PhaseName;
     public TextMeshProUGUI PhaseCounter;
-    public Button RateButton;
     public TextMeshProUGUI Title;
     public TextMeshProUGUI Description;
     public AreaEffector2D AreaEffector;
     public AudioSource Audio;
+    public GameObject Border;
+
+    public Button RateButton;
+    public Button NextButton;
+    public GameObject Popup;
 
     [Header("Settings")]
     public Vector2 Size;
@@ -37,7 +41,6 @@ public class Spawner : MonoBehaviour
     private Vector3 randPosition;
     private float lastSpawn;
     private float endSpawn;
-    private bool isEnd;
 
     private List<Tile> tiles = new List<Tile>();
     private List<CategoryInfo> categories = new List<CategoryInfo>();
@@ -71,6 +74,7 @@ public class Spawner : MonoBehaviour
         SetPhase(0);
 
         RateButton.gameObject.SetActive(false);
+        NextButton.gameObject.SetActive(false);
 
         AreaEffector.enabled = false;
     }
@@ -92,10 +96,14 @@ public class Spawner : MonoBehaviour
             {
                 endSpawn = Time.time;
 
-                RateButton.gameObject.SetActive(true);
-
-                AreaEffector.forceMagnitude = 0f;
-                AreaEffector.enabled = false;
+                if (Phases[currPhase].Phase.ShowPopup == true)
+                {
+                    NextButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    RateButton.gameObject.SetActive(true);
+                }
 
                 if (Phases[currPhase].Phase.BakeTiles == true)
                 {
@@ -108,6 +116,14 @@ public class Spawner : MonoBehaviour
 
                     tiles.Clear();
                 }
+
+                if (Phases[currPhase].Phase.WindStrength > 0f)
+                {
+                    Border.SetActive(true);
+                }
+
+                AreaEffector.forceMagnitude = 0f;
+                AreaEffector.enabled = false;
             }
         }
     }
@@ -129,12 +145,15 @@ public class Spawner : MonoBehaviour
             categories.Add(new CategoryInfo() { Category = category.Category, tilesLeft = Random.Range(category.MinCount, category.MaxCount + 1) });
         }
 
+        Popup.SetActive(Phases[currPhase].Phase.ShowPopup);
+
         if (currPhase < Phases.Count)
         {
             PhaseName.text = Phases[currPhase].Phase.Name;
             PhaseCounter.text = $"Phase {currPhase + 1}";
 
             RateButton.gameObject.SetActive(false);
+            NextButton.gameObject.SetActive(false);
 
             Title.text = Phases[currPhase].Phase.Title;
             Description.text = Phases[currPhase].Phase.Description;
@@ -144,6 +163,8 @@ public class Spawner : MonoBehaviour
         {
             AreaEffector.forceMagnitude = Phases[currPhase].Phase.WindStrength;
             AreaEffector.enabled = true;
+
+            Border.SetActive(false);
         }
 
         if (Phases[currPhase].Phase.Sound != null)

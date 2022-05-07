@@ -12,6 +12,7 @@ public class PhaseData : ScriptableObject
     public string Description;
 
     [Header("Settings")]
+    public bool ShowPopup;
     public float WindStrength = 0f;
     public float Delay = 1f;
     public AudioClip Sound;
