@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
 
         SpawnTile();
 
-        RateButton.interactable = false;
+        RateButton.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -61,6 +61,14 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    public void NextPhase()
+    {
+        if (currPhase < Phases.Count - 1)
+        {
+            SetPhase(currPhase + 1);
+        }
+    }
+
     private void SetPhase(int phase)
     {
         currPhase = phase;
@@ -70,27 +78,29 @@ public class Spawner : MonoBehaviour
             Categories.Add(new CategoryInfo() { Category = category.Category, tilesLeft = Random.Range(category.MinCount, category.MaxCount + 1) });
         }
 
-        PhaseName.text = Phases[currPhase].Phase.Name;
-        PhaseCounter.text = $"Phase {currPhase + 1}";
+        if (currPhase < Phases.Count - 1)
+        {
+            PhaseName.text = Phases[currPhase].Phase.Name;
+            PhaseCounter.text = $"Phase {currPhase + 1}";
+
+            RateButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            PhaseName.text = "Rating";
+            PhaseCounter.text = $"Phase {currPhase + 2}";
+
+            RateButton.gameObject.SetActive(true);
+        }
     }
 
     private void SpawnTile()
     {
         if (Categories.Count == 0)
         {
-            if (currPhase < Phases.Count - 1)
-            {
-                SetPhase(currPhase + 1);
-            }
-            else
-            {
-                PhaseName.text = "Rating";
-                PhaseCounter.text = $"Phase {currPhase + 2}";
+            RateButton.gameObject.SetActive(true);
 
-                RateButton.interactable = true;
-
-                return;
-            }
+            return;
         }
 
         randCategory = Categories[Random.Range(0, Categories.Count)];
