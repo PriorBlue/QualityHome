@@ -61,7 +61,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Image: {fileID: 839022190376760989}
+  Body: {fileID: 839022190376760991}
   FadeIn: 1
+  DragStrength: 10
+  MaxMagnitude: 200
 --- !u!114 &839022190376760989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,11 +132,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 2
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d8033a066659b049854100e5a5c1d42, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1

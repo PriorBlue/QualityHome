@@ -168,7 +168,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 31612642}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d8033a066659b049854100e5a5c1d42, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -306,7 +306,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 132390829}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d8033a066659b049854100e5a5c1d42, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -370,7 +370,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 211063895}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d8033a066659b049854100e5a5c1d42, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1093,7 +1093,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 946370611}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d8033a066659b049854100e5a5c1d42, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1472,5 +1472,5 @@ MonoBehaviour:
   Size: {x: 100, y: 50}
   Delay: 5
   Tiles:
-  - {fileID: 839022190376760985, guid: 32ef63abb83490345a532c9a0ecfe022, type: 3}
-  - {fileID: 839022190376760985, guid: cc05024b5421a91489ed8226ac0b7829, type: 3}
+  - {fileID: 5735699784242987583, guid: 32ef63abb83490345a532c9a0ecfe022, type: 3}
+  - {fileID: -3746276157287144226, guid: cc05024b5421a91489ed8226ac0b7829, type: 3}

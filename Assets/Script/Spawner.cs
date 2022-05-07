@@ -12,9 +12,9 @@ public class Spawner : MonoBehaviour
     public float Delay = 5f;
 
     [Header("Tiles")]
-    public List<GameObject> Tiles = new List<GameObject>();
+    public List<Tile> Tiles = new List<Tile>();
 
-    private GameObject randTile;
+    private Tile randTile;
     private Vector3 randPosition;
     private float lastSpawn;
 
@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
 
             var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.identity, Canvas);
 
-            tile.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-20f, 20f), 100f);
+            tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
         }
     }
 
