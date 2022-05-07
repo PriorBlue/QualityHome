@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -147,9 +149,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -840,6 +845,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      h_window_0: 7679415495540164018
+      h_concrete_0: -8185952012494335667
+      h_wood_1: 591497947111888394
+      h_rhombus: -7587276461341593895
+      h_beam_3: 4161200176032285494
+      h_shingles_0: 8585312451520772593
+      h_window_1: -1654719223656387399
+      h_chimney: -4660868043793409759
+      h_concrete_3: 241085081130303899
+      h_shingles_1: -1129281985081810315
+      h_door: -7259742584995004830
+      h_beam_1: -1343575091525887095
+      h_brick_2: -4511883674100483067
+      h_brick_0: 5899707131949229261
+      h_beam_4: -6188752737435134038
+      h_deco_flowerbox: -7898432973515909101
+      h_wood_0: 3883101395538516287
+      h_beam_0: 1552145060215034957
+      h_brick_1: 8097298661694913638
+      H_deco_plant: -8454338633806478812
+      h_deco_0: -1861603960018692468
+      h_stone_2: 5990852675470237522
+      h_stone_3: 1621565773421677580
+      h_roof_0: -9092990268354114573
+      h_stone_0: 5893107035824515320
+      h_concrete_1: -2697548277846692831
+      h_beam_2: -8617408612254280672
+      h_deco_1: -1044673364567137438
+      h_stone_1: 3905423202031578681
+      h_shingles_2: -8972720340578296428
+      h_roof_1: -6583322582743983420
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

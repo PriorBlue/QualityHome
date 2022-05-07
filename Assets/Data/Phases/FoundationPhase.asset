@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
+  m_Name: FoundationPhase
+  m_EditorClassIdentifier: 
+  Name: Foundation
+  Categories:
+  - Category: {fileID: 11400000, guid: 64322d369ec6ffe49b983a6fe8b2a685, type: 2}
+    MinCount: 1
+    MaxCount: 2
+  - Category: {fileID: 11400000, guid: 71cd6173eba2ed945aed1bd71e1fcfd6, type: 2}
+    MinCount: 4
+    MaxCount: 6
