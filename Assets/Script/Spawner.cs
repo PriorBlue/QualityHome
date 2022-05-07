@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Spawner : MonoBehaviour
 {
+    public static Spawner Instance;
+
     [Header("References")]
     public Transform Canvas;
-    public Text PhaseName;
-    public Text PhaseCounter;
+    public TextMeshProUGUI PhaseName;
+    public TextMeshProUGUI PhaseCounter;
     public Button RateButton;
-    public Text Title;
-    public Text Description;
+    public TextMeshProUGUI Title;
+    public TextMeshProUGUI Description;
+    public AreaEffector2D AreaEffector;
+    public AudioSource Audio;
 
     [Header("Settings")]
     public Vector2 Size;
@@ -32,6 +37,7 @@ public class Spawner : MonoBehaviour
     private Vector3 randPosition;
     private float lastSpawn;
     private float endSpawn;
+    private bool isEnd;
 
     private List<Tile> tiles = new List<Tile>();
     private List<CategoryInfo> categories = new List<CategoryInfo>();
@@ -43,15 +49,30 @@ public class Spawner : MonoBehaviour
         public int tilesLeft;
     }
 
+    public PhaseData GetCurrentPhase()
+    {
+        return Phases[currPhase].Phase;
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+
     private void Start()
     {
         lastSpawn = Time.time;
 
         SetPhase(0);
 
-        SpawnTile();
-
         RateButton.gameObject.SetActive(false);
+
+        AreaEffector.enabled = false;
     }
 
     private void Update()
@@ -69,7 +90,24 @@ public class Spawner : MonoBehaviour
         {
             if (Time.time - endSpawn > Phases[currPhase].Phase.Delay)
             {
+                endSpawn = Time.time;
+
                 RateButton.gameObject.SetActive(true);
+
+                AreaEffector.forceMagnitude = 0f;
+                AreaEffector.enabled = false;
+
+                if (Phases[currPhase].Phase.BakeTiles == true)
+                {
+                    foreach (var tile in tiles)
+                    {
+                        tile.Body.bodyType = RigidbodyType2D.Static;
+                        tile.Outline.enabled = false;
+                        tile.enabled = false;
+                    }
+
+                    tiles.Clear();
+                }
             }
         }
     }
@@ -102,14 +140,22 @@ public class Spawner : MonoBehaviour
             Description.text = Phases[currPhase].Phase.Description;
         }
 
-        foreach (var tile in tiles)
+        if (Phases[currPhase].Phase.WindStrength > 0f)
         {
-            tile.Body.bodyType = RigidbodyType2D.Static;
-            tile.Outline.enabled = false;
-            tile.enabled = false;
+            AreaEffector.forceMagnitude = Phases[currPhase].Phase.WindStrength;
+            AreaEffector.enabled = true;
         }
 
-        tiles.Clear();
+        if (Phases[currPhase].Phase.Sound != null)
+        {
+            Audio.Stop();
+            Audio.clip = Phases[currPhase].Phase.Sound;
+            Audio.Play();
+        }
+        else
+        {
+            Audio.Stop();
+        }
     }
 
     private void SpawnTile()
@@ -126,14 +172,9 @@ public class Spawner : MonoBehaviour
             categories.Remove(randCategory);
         }
 
-        if (categories.Count == 0)
-        {
-            endSpawn = Time.time;
-        }
-
         var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
 
-        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 200f);
+        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
 
         tiles.Add(tile);
     }

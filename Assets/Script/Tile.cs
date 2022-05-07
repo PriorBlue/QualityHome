@@ -92,6 +92,11 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (Spawner.Instance.GetCurrentPhase().BakeTiles == true)
+        {
+            return;
+        }
+
         isDragging = true;
 
         Vector2 result;
@@ -104,6 +109,11 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (Spawner.Instance.GetCurrentPhase().BakeTiles == true)
+        {
+            return;
+        }
+
         isDragging = false;
 
         Target.anchor = Vector2.zero;
@@ -122,12 +132,22 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (Spawner.Instance.GetCurrentPhase().BakeTiles == true)
+        {
+            return;
+        }
+
         isOver = true;
         Outline.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (Spawner.Instance.GetCurrentPhase().BakeTiles == true)
+        {
+            return;
+        }
+
         isOver = false;
 
         if (isDragging == false)

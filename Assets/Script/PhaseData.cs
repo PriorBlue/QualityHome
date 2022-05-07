@@ -12,7 +12,10 @@ public class PhaseData : ScriptableObject
     public string Description;
 
     [Header("Settings")]
+    public float WindStrength = 0f;
     public float Delay = 1f;
+    public AudioClip Sound;
+    public bool BakeTiles = false;
 
     [Header("Categories")]
     public List<CategoryInfo> Categories = new List<CategoryInfo>();
