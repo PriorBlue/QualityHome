@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Rate
   m_EditorClassIdentifier: 
   Name: Rate
-  Title: You build a home!
-  Description: It may be janky, but it's made with love. Let's see if it can defy
-    the winds.
+  Title: Don't forget to take a picture.
+  Description: 'This took a lot of effort to build,
+
+    let''s make sure you can
+    always look back.'
   ShowPopup: 1
   WindStrength: 0
   Delay: 1
