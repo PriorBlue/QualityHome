@@ -307,6 +307,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GUI_Home
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a6c86265849854190d492d28460f0d
+      internalID: -1956067053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_Home_highlighted
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b020683fa30404a88b660d7f6bd541
+      internalID: 631440387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_Home_pressed
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8de24643672f840bfea5cf6a953730
+      internalID: 1401321324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -318,13 +381,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      GUI_Home: -1956067053
       GUI_background: 8105364098890919055
+      GUI_Home_highlighted: 631440387
       GUI_button_arrow: 5740453210667488706
       GUI_button_checkmark_highlighted: 319298653339161350
       GUI_bakcground_plant: -5376358965234703051
       GUI_popup: -7151958888795693489
       GUI_button_arrow_highlighted: 2802904198054408972
       GUI_button_checkmark: -3238813901825184631
+      GUI_Home_pressed: 1401321324
       GUI_button_checkmark_pressed: 6667725422741070258
       GUI_button_arrow_pressed: -9168193397101357998
   spritePackingTag: 
