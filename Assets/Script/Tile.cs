@@ -28,6 +28,7 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     private bool isDragging;
     private bool isOver;
+    private float lastWoosh;
 
     private void Reset()
     {
@@ -79,8 +80,10 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
             Body.angularVelocity = -MaxAngularMagnitude;
         }
 
-        if (isDragging && Body.velocity.magnitude >= 1000f && Audio.isPlaying == false)
+        if (isDragging && Body.velocity.magnitude >= 1000f && Time.time >= lastWoosh + 0.5f)
         {
+            lastWoosh = Time.time;
+
             Audio.clip = Category.WooshSound[Random.Range(0, Category.WooshSound.Count)];
             Audio.Play();
         }

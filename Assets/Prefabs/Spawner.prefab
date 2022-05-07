@@ -59,10 +59,13 @@ MonoBehaviour:
   Music: {fileID: 2054517589169848472}
   Sound: {fileID: 0}
   Border: {fileID: 0}
+  WindLeft: {fileID: 0}
+  WindRight: {fileID: 0}
+  Backgrounds: []
   RateButton: {fileID: 0}
   NextButton: {fileID: 0}
   Popup: {fileID: 0}
-  Size: {x: 75, y: 120}
+  Size: {x: 50, y: 75}
   Delay: 0.2
   SpawnSound:
   - {fileID: 8300000, guid: 178eab8896544c54f8614b94794c1ccd, type: 3}

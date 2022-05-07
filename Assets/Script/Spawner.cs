@@ -19,6 +19,9 @@ public class Spawner : MonoBehaviour
     public AudioSource Music;
     public AudioSource Sound;
     public GameObject Border;
+    public GameObject WindLeft;
+    public GameObject WindRight;
+    public List<Image> Backgrounds = new List<Image>();
 
     public Button RateButton;
     public Button NextButton;
@@ -79,6 +82,12 @@ public class Spawner : MonoBehaviour
         RateButton.gameObject.SetActive(false);
         NextButton.gameObject.SetActive(false);
 
+        WindLeft.SetActive(false);
+        WindRight.SetActive(false);
+
+        Backgrounds[0].gameObject.SetActive(true);
+        Backgrounds[0].color = Color.white;
+
         AreaEffector.enabled = false;
     }
 
@@ -129,6 +138,11 @@ public class Spawner : MonoBehaviour
                 AreaEffector.enabled = false;
             }
         }
+
+        if (Phases[currPhase].Phase.ChangeBackground >= 1)
+        {
+            Backgrounds[Phases[currPhase].Phase.ChangeBackground].color = Color.Lerp(Backgrounds[Phases[currPhase].Phase.ChangeBackground].color, Color.white, Time.deltaTime * 0.2f);
+        }
     }
 
     public void NextPhase()
@@ -175,6 +189,22 @@ public class Spawner : MonoBehaviour
             Border.SetActive(false);
         }
 
+        if (Phases[currPhase].Phase.WindStrength > 0f)
+        {
+            WindLeft.SetActive(true);
+            WindRight.SetActive(false);
+        }
+        else if (Phases[currPhase].Phase.WindStrength < 0f)
+        {
+            WindLeft.SetActive(false);
+            WindRight.SetActive(true);
+        }
+        else
+        {
+            WindLeft.SetActive(false);
+            WindRight.SetActive(false);
+        }
+
         if (Phases[currPhase].Phase.Sound != null)
         {
             Music.Stop();
@@ -190,6 +220,12 @@ public class Spawner : MonoBehaviour
         {
             Sound.clip = SpawnSound[Random.Range(0, SpawnSound.Count)];
             Sound.Play();
+        }
+
+        if (Phases[currPhase].Phase.ChangeBackground >= 1)
+        {
+            Backgrounds[Phases[currPhase].Phase.ChangeBackground].gameObject.SetActive(true);
+            Backgrounds[Phases[currPhase].Phase.ChangeBackground].color = new Color(1f, 1f, 1f, 0f);
         }
     }
 

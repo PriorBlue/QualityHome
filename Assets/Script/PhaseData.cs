@@ -17,6 +17,7 @@ public class PhaseData : ScriptableObject
     public float Delay = 1f;
     public AudioClip Sound;
     public bool BakeTiles = false;
+    public int ChangeBackground = 0;
 
     [Header("Categories")]
     public List<CategoryInfo> Categories = new List<CategoryInfo>();

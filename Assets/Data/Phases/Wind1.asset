@@ -23,4 +23,5 @@ MonoBehaviour:
   Delay: 10
   Sound: {fileID: 8300000, guid: 105dbba919e808b42bafbab4619bf88c, type: 3}
   BakeTiles: 1
+  ChangeBackground: 1
   Categories: []
