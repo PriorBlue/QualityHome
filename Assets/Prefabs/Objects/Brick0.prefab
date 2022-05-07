@@ -164,7 +164,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 960, y: 540}
+  m_Target: {x: 0, y: 0}
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 1
@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 4, y: -4}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1

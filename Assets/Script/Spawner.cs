@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     public Text PhaseName;
     public Text PhaseCounter;
     public Button RateButton;
+    public Text Title;
+    public Text Description;
 
     [Header("Settings")]
     public Vector2 Size;
@@ -29,9 +31,10 @@ public class Spawner : MonoBehaviour
     private Tile randTile;
     private Vector3 randPosition;
     private float lastSpawn;
+    private float endSpawn;
 
-    [Header("Debug")]
-    public List<CategoryInfo> Categories = new List<CategoryInfo>();
+    private List<Tile> tiles = new List<Tile>();
+    private List<CategoryInfo> categories = new List<CategoryInfo>();
 
     [System.Serializable]
     public class CategoryInfo
@@ -53,11 +56,21 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= lastSpawn + Delay)
+        if (categories.Count >= 1)
         {
-            lastSpawn = Time.time;
+            if (Time.time >= lastSpawn + Delay)
+            {
+                lastSpawn = Time.time;
 
-            SpawnTile();
+                SpawnTile();
+            }
+        }
+        else
+        {
+            if (Time.time - endSpawn > Phases[currPhase].Phase.Delay)
+            {
+                RateButton.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -75,35 +88,33 @@ public class Spawner : MonoBehaviour
 
         foreach (var category in Phases[currPhase].Phase.Categories)
         {
-            Categories.Add(new CategoryInfo() { Category = category.Category, tilesLeft = Random.Range(category.MinCount, category.MaxCount + 1) });
+            categories.Add(new CategoryInfo() { Category = category.Category, tilesLeft = Random.Range(category.MinCount, category.MaxCount + 1) });
         }
 
-        if (currPhase < Phases.Count - 1)
+        if (currPhase < Phases.Count)
         {
             PhaseName.text = Phases[currPhase].Phase.Name;
             PhaseCounter.text = $"Phase {currPhase + 1}";
 
             RateButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            PhaseName.text = "Rating";
-            PhaseCounter.text = $"Phase {currPhase + 2}";
 
-            RateButton.gameObject.SetActive(true);
+            Title.text = Phases[currPhase].Phase.Title;
+            Description.text = Phases[currPhase].Phase.Description;
         }
+
+        foreach (var tile in tiles)
+        {
+            tile.Body.bodyType = RigidbodyType2D.Static;
+            tile.Outline.enabled = false;
+            tile.enabled = false;
+        }
+
+        tiles.Clear();
     }
 
     private void SpawnTile()
     {
-        if (Categories.Count == 0)
-        {
-            RateButton.gameObject.SetActive(true);
-
-            return;
-        }
-
-        randCategory = Categories[Random.Range(0, Categories.Count)];
+        randCategory = categories[Random.Range(0, categories.Count)];
 
         randCategory.tilesLeft--;
 
@@ -112,12 +123,19 @@ public class Spawner : MonoBehaviour
 
         if (randCategory.tilesLeft <= 0)
         {
-            Categories.Remove(randCategory);
+            categories.Remove(randCategory);
+        }
+
+        if (categories.Count == 0)
+        {
+            endSpawn = Time.time;
         }
 
         var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
 
-        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
+        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 200f);
+
+        tiles.Add(tile);
     }
 
     private void OnDrawGizmos()

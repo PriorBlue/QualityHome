@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
   m_Name: MainPhase
   m_EditorClassIdentifier: 
-  Name: Foundation
+  Name: Main Hall
   Categories:
   - Category: {fileID: 11400000, guid: 71cd6173eba2ed945aed1bd71e1fcfd6, type: 2}
     MinCount: 2

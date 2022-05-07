@@ -23,6 +23,7 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     private float currFade;
 
     private bool isDragging;
+    private bool isOver;
 
     private void Reset()
     {
@@ -113,16 +114,22 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
             Body.velocity = Body.velocity.normalized * MaxMagnitude;
         }
 
-        Outline.enabled = false;
+        if (isOver == false)
+        {
+            Outline.enabled = false;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        isOver = true;
         Outline.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        isOver = false;
+
         if (isDragging == false)
         {
             Outline.enabled = false;

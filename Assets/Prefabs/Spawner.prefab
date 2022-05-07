@@ -53,9 +53,12 @@ MonoBehaviour:
   PhaseName: {fileID: 0}
   PhaseCounter: {fileID: 0}
   RateButton: {fileID: 0}
-  Size: {x: 50, y: 50}
-  Delay: 1
+  Title: {fileID: 0}
+  Description: {fileID: 0}
+  Size: {x: 50, y: 200}
+  Delay: 0.2
   Phases:
   - Phase: {fileID: 11400000, guid: 68fd0eed413ec44409af407c58b38d5c, type: 2}
+  - Phase: {fileID: 11400000, guid: 0573e95005eedbc41be8e10974f24c87, type: 2}
   - Phase: {fileID: 11400000, guid: 3b1581e1e8b9dd949a417e451ee3dadd, type: 2}
-  Categories: []
+  - Phase: {fileID: 11400000, guid: 51f49463633776545a3ca7dc7cbbd5b7, type: 2}
