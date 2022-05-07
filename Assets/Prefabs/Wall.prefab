@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 839022190376760989}
   - component: {fileID: 839022190376760988}
   - component: {fileID: 839022190376760991}
+  - component: {fileID: 1207756287850864474}
   m_Layer: 5
   m_Name: Wall
   m_TagString: Untagged
@@ -61,10 +62,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Image: {fileID: 839022190376760989}
+  Rect: {fileID: 839022190376760990}
   Body: {fileID: 839022190376760991}
+  Target: {fileID: 1207756287850864474}
   FadeIn: 1
   DragStrength: 10
   MaxMagnitude: 200
+  MaxAngularMagnitude: 10
 --- !u!114 &839022190376760989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +145,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!257 &1207756287850864474
+TargetJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839022190376760985}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_Anchor: {x: 0, y: 0}
+  m_Target: {x: 0, y: 0}
+  m_AutoConfigureTarget: 1
+  m_MaxForce: 1000000
+  m_DampingRatio: 1
+  m_Frequency: 10

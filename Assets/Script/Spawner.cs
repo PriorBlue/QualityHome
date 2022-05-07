@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
             randTile = Tiles[Random.Range(0, Tiles.Count)];
             randPosition = new Vector3(Random.Range(-Size.x, Size.x), Random.Range(-Size.y, Size.y), 0f);
 
-            var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.identity, Canvas);
+            var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
 
             tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
         }
