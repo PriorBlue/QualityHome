@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
-  m_Name: RoofPhase
+  m_Name: Roof
   m_EditorClassIdentifier: 
   Name: Roof
   Title: 
   Description: 
+  ShowPopup: 0
+  WindStrength: 0
   Delay: 1
+  Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
+  BakeTiles: 0
   Categories:
   - Category: {fileID: 11400000, guid: dd3c7e536fb5e8949b695de4d755bd1e, type: 2}
     MinCount: 1

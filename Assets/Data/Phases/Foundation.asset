@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
-  m_Name: FoundationPhase
+  m_Name: Foundation
   m_EditorClassIdentifier: 
   Name: Foundation
   Title: Home is where your hut is.
   Description: 'Your goal is simple: build a home. First the fundament, then the
     base and then the roof.  Drag & Drop the objects from left to right.  But beware
     the process might not be as simple as you think.'
+  ShowPopup: 0
+  WindStrength: 0
   Delay: 1
+  Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
+  BakeTiles: 0
   Categories:
   - Category: {fileID: 11400000, guid: 8472c01d99b5cbe4fa137f5bd5c36aac, type: 2}
     MinCount: 3

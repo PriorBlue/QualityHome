@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
-  m_Name: Wind1Phase
+  m_Name: Wind1
   m_EditorClassIdentifier: 
   Name: Wind
   Title: You build a foundation.
@@ -18,5 +18,9 @@ MonoBehaviour:
 
     Let''s see if it can defy the
     winds.'
-  Delay: 1
+  ShowPopup: 1
+  WindStrength: 10000
+  Delay: 10
+  Sound: {fileID: 8300000, guid: 105dbba919e808b42bafbab4619bf88c, type: 3}
+  BakeTiles: 1
   Categories: []

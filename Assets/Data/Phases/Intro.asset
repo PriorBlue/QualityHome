@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f825f75fbfc2941a04c145cc02154c, type: 3}
   m_Name: Intro
   m_EditorClassIdentifier: 
-  Name: Wind
-  Title: You build a home!
-  Description: 'It may be janky, but it''s made with love.
-
-    Let''s see if it
-    can defy the winds.'
-  WindStrength: 30000
+  Name: Intro
+  Title: Welcome
+  Description: Press the arrow to start.
+  ShowPopup: 1
+  WindStrength: 0
   Delay: 1
-  Sound: {fileID: 0}
-  BakeTiles: 1
+  Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
+  BakeTiles: 0
   Categories: []

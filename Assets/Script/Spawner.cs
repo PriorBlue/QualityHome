@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -117,7 +118,7 @@ public class Spawner : MonoBehaviour
                     tiles.Clear();
                 }
 
-                if (Phases[currPhase].Phase.WindStrength > 0f)
+                if (Phases[currPhase].Phase.WindStrength != 0f)
                 {
                     Border.SetActive(true);
                 }
@@ -133,6 +134,11 @@ public class Spawner : MonoBehaviour
         if (currPhase < Phases.Count - 1)
         {
             SetPhase(currPhase + 1);
+        }
+        else
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
     }
 
@@ -159,7 +165,7 @@ public class Spawner : MonoBehaviour
             Description.text = Phases[currPhase].Phase.Description;
         }
 
-        if (Phases[currPhase].Phase.WindStrength > 0f)
+        if (Phases[currPhase].Phase.WindStrength != 0f)
         {
             AreaEffector.forceMagnitude = Phases[currPhase].Phase.WindStrength;
             AreaEffector.enabled = true;
