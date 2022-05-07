@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 839022190376760991}
   - component: {fileID: 1207756287850864474}
   - component: {fileID: 774243705919197464}
+  - component: {fileID: 4638411823059436484}
   m_Layer: 5
-  m_Name: Brick1
+  m_Name: Shingles1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,14 +34,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 68, y: 64}
+  m_AnchoredPosition: {x: -0.00002861, y: 0}
+  m_SizeDelta: {x: 248.8028, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &839022190376760674
 CanvasRenderer:
@@ -86,11 +88,12 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4511883674100483067, guid: b1934c51b68bb24428adc45022014749,
+  m_Sprite: {fileID: -1129281985081810315, guid: b1934c51b68bb24428adc45022014749,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -114,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.8510132, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -125,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 68, y: 64}
+  m_Size: {x: 248.41052, y: 64}
   m_EdgeRadius: 0
 --- !u!50 &839022190376760991
 Rigidbody2D:
@@ -162,7 +165,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 598.5, y: 349}
+  m_Target: {x: 960, y: 540}
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 1
@@ -182,3 +185,46 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
+--- !u!60 &4638411823059436484
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839022190376760985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -125.03528, y: 32.082214}
+      - {x: -124.53839, y: -10.143311}
+      - {x: -109.6911, y: -32.203278}
+      - {x: -77.64313, y: -32.553833}
+      - {x: -67.40521, y: -12.396179}
+      - {x: -58.327698, y: -12.205078}
+      - {x: -47.266296, y: -32.40222}
+      - {x: -15.832825, y: -32.341675}
+      - {x: -4.175232, y: -13.599945}
+      - {x: 4.5481567, y: -13.59613}
+      - {x: 16.085388, y: -31.493622}
+      - {x: 49.88202, y: -31.866302}
+      - {x: 58.00464, y: -13.9539795}
+      - {x: 69.00806, y: -13.457886}
+      - {x: 78.87371, y: -32.18601}
+      - {x: 109.96593, y: -31.891262}
+      - {x: 123.5038, y: -10.698788}
+      - {x: 124.22028, y: 31.744442}
