@@ -61,13 +61,13 @@ MonoBehaviour:
   Size: {x: 75, y: 120}
   Delay: 0.2
   Phases:
-  - Phase: {fileID: 11400000, guid: 8ff481a839c30c14a944c1d3548ff827, type: 2}
+  - Phase: {fileID: 11400000, guid: 58ffabd17013fc545aec4ee468aeda98, type: 2}
   - Phase: {fileID: 11400000, guid: 68fd0eed413ec44409af407c58b38d5c, type: 2}
   - Phase: {fileID: 11400000, guid: 17fd4b11e8a7cf843a72bcc8e227bfcd, type: 2}
   - Phase: {fileID: 11400000, guid: 0573e95005eedbc41be8e10974f24c87, type: 2}
-  - Phase: {fileID: 11400000, guid: 4443f66d7b5fe4945ba8fc3039e21662, type: 2}
+  - Phase: {fileID: 11400000, guid: 7010a818a41106b4b86006f0332808aa, type: 2}
   - Phase: {fileID: 11400000, guid: 3b1581e1e8b9dd949a417e451ee3dadd, type: 2}
-  - Phase: {fileID: 11400000, guid: c68d7b841cd2d9347be46486ad3b3019, type: 2}
+  - Phase: {fileID: 11400000, guid: 47bcec2d08677d94a8e85a1886dc9c15, type: 2}
   - Phase: {fileID: 11400000, guid: 51f49463633776545a3ca7dc7cbbd5b7, type: 2}
 --- !u!82 &2054517589169848472
 AudioSource:
