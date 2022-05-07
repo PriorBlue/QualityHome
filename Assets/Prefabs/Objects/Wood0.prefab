@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 68, y: 64}
+  m_SizeDelta: {x: 68.75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &839022190376760674
 CanvasRenderer:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 3883101395538516287, guid: b1934c51b68bb24428adc45022014749,
     type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -183,10 +183,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -19.17096, y: 31.147827}
+    - - {x: 28.381104, y: 36.453857}
+      - {x: -20.46344, y: 37.28717}
       - {x: -35.118538, y: 21.1806}
       - {x: -34.588562, y: -4.887024}
-      - {x: -3.5252242, y: -32.657497}
-      - {x: 9.50885, y: -31.81424}
+      - {x: -3.040544, y: -37.82745}
+      - {x: 9.83197, y: -37.307343}
       - {x: 33.67305, y: -9.466854}
       - {x: 33.88166, y: 31.848263}

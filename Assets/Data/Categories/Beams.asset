@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Beams
   m_EditorClassIdentifier: 
   Tiles:
+  - {fileID: 5735699784242987583, guid: dc2135acb6a4abe40860aedd75d33296, type: 3}
   - {fileID: 5735699784242987583, guid: 917c78d389bc8174ab8f68d0d5245101, type: 3}
   - {fileID: 5735699784242987583, guid: 4ad38e033104045448f7a9f51fb2b6a7, type: 3}
+  - {fileID: 5735699784242987583, guid: b46be3990af26df40bc84365f62b4418, type: 3}
+  - {fileID: 5735699784242987583, guid: 6fda60147a6fc09478b8ab1d54d25b55, type: 3}

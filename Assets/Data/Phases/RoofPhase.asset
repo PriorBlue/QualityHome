@@ -15,5 +15,14 @@ MonoBehaviour:
   Name: Roof
   Categories:
   - Category: {fileID: 11400000, guid: dd3c7e536fb5e8949b695de4d755bd1e, type: 2}
+    MinCount: 1
+    MaxCount: 2
+  - Category: {fileID: 11400000, guid: 0bf5fb1833e6d734ca3d5a5411aa0604, type: 2}
+    MinCount: 2
+    MaxCount: 5
+  - Category: {fileID: 11400000, guid: 14fc028d219616d4c86221d559b15d77, type: 2}
+    MinCount: 2
+    MaxCount: 3
+  - Category: {fileID: 11400000, guid: cb00a6717d320db40bbe01478667f900, type: 2}
     MinCount: 4
     MaxCount: 5

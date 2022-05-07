@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 84, y: 16}
+  m_SizeDelta: {x: 343.75, y: 12.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &839022190376760674
 CanvasRenderer:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Sprite: {fileID: -6188752737435134038, guid: b1934c51b68bb24428adc45022014749,
     type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.18417358, y: -0.04043579}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -127,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 84, y: 16}
+  m_Size: {x: 343.72772, y: 11.831116}
   m_EdgeRadius: 0
 --- !u!50 &839022190376760991
 Rigidbody2D:
@@ -164,7 +164,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 643.5, y: 387}
+  m_Target: {x: 960, y: 540}
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 1
