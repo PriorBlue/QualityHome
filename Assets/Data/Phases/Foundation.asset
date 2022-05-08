@@ -14,14 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Foundation
   Title: Home is where your hut is.
-  Description: 'Your goal is simple: build a home. First the fundament, then the
-    base and then the roof.  Drag & Drop the objects from left to right.  But beware
-    the process might not be as simple as you think.'
+  Description: 
   ShowPopup: 0
   WindStrength: 0
   Delay: 1
   Sound: {fileID: 8300000, guid: 2c4ddfccfdab3fa469eb873b9c238bf9, type: 3}
   BakeTiles: 0
+  ChangeBackground: 0
   Categories:
   - Category: {fileID: 11400000, guid: 8472c01d99b5cbe4fa137f5bd5c36aac, type: 2}
     MinCount: 3

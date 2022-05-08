@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Wind2
   m_EditorClassIdentifier: 
   Name: Wind
-  Title: The roof is missing, but it already looks like a home.
-  Description: Let's see if it can defy the winds.
+  Title: You got the base.
+  Description: "The roof is missing, \nbut it already feels like home.\n\nLet's see
+    if it can defy the winds."
   ShowPopup: 1
   WindStrength: -1800
-  Delay: 10
+  Delay: 8
   Sound: {fileID: 8300000, guid: 10b01a3e0466c4145907e7f6960ceb98, type: 3}
   BakeTiles: 1
   ChangeBackground: 2

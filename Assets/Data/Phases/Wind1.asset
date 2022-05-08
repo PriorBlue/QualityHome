@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Wind1
   m_EditorClassIdentifier: 
   Name: Wind
-  Title: You build a foundation.
+  Title: You built a foundation.
   Description: 'This is the most important part.
 
-    Let''s see if it can defy the
-    winds.'
+
+    Let''s see if it can defy
+    the winds.'
   ShowPopup: 1
   WindStrength: 2000
-  Delay: 10
+  Delay: 8
   Sound: {fileID: 8300000, guid: 105dbba919e808b42bafbab4619bf88c, type: 3}
   BakeTiles: 1
   ChangeBackground: 1
