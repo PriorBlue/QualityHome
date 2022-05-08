@@ -349,7 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 337317441}
   - component: {fileID: 337317437}
-  - component: {fileID: 337317440}
   - component: {fileID: 337317439}
   - component: {fileID: 337317438}
   m_Layer: 0
@@ -452,14 +451,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &337317440
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337317436}
-  m_Enabled: 1
 --- !u!4 &337317441
 Transform:
   m_ObjectHideFlags: 0
@@ -554,7 +545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 714622208}
   - component: {fileID: 714622207}
-  - component: {fileID: 714622206}
   - component: {fileID: 714622205}
   - component: {fileID: 714622204}
   m_Layer: 0
@@ -614,14 +604,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &714622206
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714622203}
-  m_Enabled: 1
 --- !u!20 &714622207
 Camera:
   m_ObjectHideFlags: 0
@@ -1357,36 +1339,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2462687319115165448, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
         type: 3}
       propertyPath: m_Name
@@ -1532,10 +1484,5 @@ PrefabInstance:
       propertyPath: Backgrounds.Array.data[3]
       value: 
       objectReference: {fileID: 235670218}
-    - target: {fileID: 7885263073306032151, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3887632b5f7a77a45b45b8d1e0a229d2, type: 3}

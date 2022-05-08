@@ -886,6 +886,78 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &629130261619456063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 629130261619456056}
+  - component: {fileID: 629130261619456964}
+  - component: {fileID: 629130261619456058}
+  m_Layer: 8
+  m_Name: ContainerTriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &629130261619456056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629130261619456063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2462687319115165452}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -769.1, y: -379.01}
+  m_SizeDelta: {x: 208.92, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &629130261619456964
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629130261619456063}
+  m_CullTransparentMesh: 0
+--- !u!61 &629130261619456058
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629130261619456063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.20837975, y: 0.7019793}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5832405, y: 3.3533819}
+  m_EdgeRadius: 0
 --- !u!1 &733475788804834758
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,10 +991,10 @@ RectTransform:
   m_Father: {fileID: 7885263073306032151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -48.91}
-  m_SizeDelta: {x: 668, y: 49.82}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4168769939595245343
 CanvasRenderer:
@@ -1308,6 +1380,7 @@ RectTransform:
   - {fileID: 64988169571059416}
   - {fileID: 5142831097442442981}
   - {fileID: 9082377930681642108}
+  - {fileID: 629130261619456056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1896,7 +1969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0359039, y: 0.00019836}
+  m_AnchoredPosition: {x: 1.0359039, y: 0.00019836426}
   m_SizeDelta: {x: 373.0645, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3757482012447341993
@@ -2209,7 +2282,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 49}
-  m_SizeDelta: {x: 700, y: 97.82}
+  m_SizeDelta: {x: 700, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2229883002327507248
 CanvasRenderer:
@@ -2991,6 +3064,11 @@ PrefabInstance:
       propertyPath: WindLeft
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3141303749272307644, guid: 4831d8e6280f61a439dde2a12f42b916,
+        type: 3}
+      propertyPath: Container
+      value: 
+      objectReference: {fileID: 629130261619456058}
     - target: {fileID: 3141303749272307644, guid: 4831d8e6280f61a439dde2a12f42b916,
         type: 3}
       propertyPath: PhaseName
