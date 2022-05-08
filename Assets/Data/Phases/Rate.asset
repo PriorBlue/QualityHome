@@ -17,7 +17,9 @@ MonoBehaviour:
   Description: 'This took a lot of effort to build,
 
     take a picture & remember
-    it fondly.'
+    it fondly.
+
+    (change background with 1,2,3,4)'
   ShowPopup: 1
   WindStrength: 0
   Delay: 1
