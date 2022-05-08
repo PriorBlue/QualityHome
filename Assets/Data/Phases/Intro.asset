@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Intro
   Title: Welcome
-  Description: Press the arrow to start.
+  Description: "Your goal is simple: build a home. \nBut beware the process might
+    not be as simple as you think.\nPress the arrow to start."
   ShowPopup: 1
   WindStrength: 0
   Delay: 1
   Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
   BakeTiles: 0
+  ChangeBackground: 0
   Categories: []

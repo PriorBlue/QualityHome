@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Rate
   m_EditorClassIdentifier: 
   Name: Rate
-  Title: Don't forget to take a picture.
+  Title: Take a picture.
   Description: 'This took a lot of effort to build,
 
-    let''s make sure you can
-    always look back.'
+    take a picture & remember
+    it fondly.'
   ShowPopup: 1
   WindStrength: 0
   Delay: 1
   Sound: {fileID: 8300000, guid: 834eabd606c89ee4d87acde3f8b768b6, type: 3}
   BakeTiles: 0
+  ChangeBackground: 0
   Categories: []
