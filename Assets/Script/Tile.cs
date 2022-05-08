@@ -68,7 +68,7 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     {
         if (isDragging)
         {
-            Target.target = Input.mousePosition;
+            Target.target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
         if (Body.angularVelocity > MaxAngularMagnitude)
@@ -114,7 +114,7 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
         Vector2 result;
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(Rect, Input.mousePosition, null, out result);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(Rect, Camera.main.ScreenToWorldPoint(Input.mousePosition), null, out result);
 
         Target.anchor = result;
         Target.enabled = true;

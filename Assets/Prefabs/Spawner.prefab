@@ -65,7 +65,7 @@ MonoBehaviour:
   RateButton: {fileID: 0}
   NextButton: {fileID: 0}
   Popup: {fileID: 0}
-  Size: {x: 50, y: 75}
+  Size: {x: 1, y: 1.5}
   Delay: 0.2
   SpawnSound:
   - {fileID: 8300000, guid: 178eab8896544c54f8614b94794c1ccd, type: 3}

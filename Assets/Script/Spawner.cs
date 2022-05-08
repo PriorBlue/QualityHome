@@ -240,7 +240,7 @@ public class Spawner : MonoBehaviour
 
         var tile = Instantiate(randTile, transform.position + randPosition, Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward), Canvas);
 
-        tile.Body.velocity = new Vector2(Random.Range(-20f, 20f), 100f);
+        tile.Body.velocity = new Vector2(Random.Range(-1f, 1f), 10f);
 
         tile.Category = randCategory.Category;
 
