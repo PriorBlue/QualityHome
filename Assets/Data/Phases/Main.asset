@@ -20,22 +20,23 @@ MonoBehaviour:
   Delay: 1
   Sound: {fileID: 8300000, guid: 2fae7d107a46ec94ca4e279485332f11, type: 3}
   BakeTiles: 0
+  ChangeBackground: 0
   Categories:
   - Category: {fileID: 11400000, guid: 71cd6173eba2ed945aed1bd71e1fcfd6, type: 2}
-    MinCount: 5
-    MaxCount: 7
+    MinCount: 3
+    MaxCount: 5
   - Category: {fileID: 11400000, guid: 5ab83ef6e8068a944b9a6d1560247b53, type: 2}
     MinCount: 1
     MaxCount: 1
   - Category: {fileID: 11400000, guid: fe9ee4d588af8014d8698820994cf893, type: 2}
     MinCount: 1
-    MaxCount: 3
+    MaxCount: 2
   - Category: {fileID: 11400000, guid: 14fc028d219616d4c86221d559b15d77, type: 2}
     MinCount: 2
     MaxCount: 3
   - Category: {fileID: 11400000, guid: 64322d369ec6ffe49b983a6fe8b2a685, type: 2}
-    MinCount: 2
-    MaxCount: 4
+    MinCount: 1
+    MaxCount: 3
   - Category: {fileID: 11400000, guid: a20a0ce67be9d394290c06d7ba71a50e, type: 2}
-    MinCount: 3
-    MaxCount: 4
+    MinCount: 2
+    MaxCount: 3
