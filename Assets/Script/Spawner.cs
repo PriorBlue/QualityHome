@@ -52,6 +52,8 @@ public class Spawner : MonoBehaviour
     private List<Tile> tiles = new List<Tile>();
     private List<CategoryInfo> categories = new List<CategoryInfo>();
 
+    public List<GameObject> containerTiles = new List<GameObject>();
+
     [System.Serializable]
     public class CategoryInfo
     {
@@ -109,21 +111,29 @@ public class Spawner : MonoBehaviour
             {
                 endSpawn = Time.time;
 
-                if (ContainerEmpty())
+                if (Phases[currPhase].Phase.ShowPopup == true)
+                {
+                    NextButton.gameObject.SetActive(true);
+                }
+                else
                 {
                     if (Phases[currPhase].Phase.ShowPopup == true)
                     {
                         NextButton.gameObject.SetActive(true);
                     }
-                    else
+                    else if (containerTiles.Count == 0)
                     {
                         RateButton.gameObject.SetActive(true);
                     }
                 }
 
-
                 if (Phases[currPhase].Phase.BakeTiles == true)
                 {
+                    foreach (var tile in containerTiles.ToArray())
+                    {
+                        Destroy(tile.gameObject);
+                    }
+
                     foreach (var tile in tiles)
                     {
                         tile.Body.bodyType = RigidbodyType2D.Static;
@@ -283,5 +293,22 @@ public class Spawner : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, Size * 2f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        containerTiles.Add(collision.gameObject);
+
+        RateButton.gameObject.SetActive(false);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        containerTiles.Remove(collision.gameObject);
+
+        if (containerTiles.Count == 0 && Phases[currPhase].Phase.BakeTiles == false)
+        {
+            RateButton.gameObject.SetActive(true);
+        }
     }
 }
