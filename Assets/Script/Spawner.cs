@@ -182,6 +182,11 @@ public class Spawner : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     private bool ContainerEmpty()
     {
         foreach (Tile tile in tiles)
