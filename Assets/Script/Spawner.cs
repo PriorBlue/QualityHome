@@ -146,7 +146,7 @@ public class Spawner : MonoBehaviour
 
         if (Phases[currPhase].Phase.ChangeBackground >= 1)
         {
-            Backgrounds[Phases[currPhase].Phase.ChangeBackground].color = Color.Lerp(Backgrounds[Phases[currPhase].Phase.ChangeBackground].color, Color.white, Time.deltaTime * 0.2f);
+            Backgrounds[Phases[currPhase].Phase.ChangeBackground].color = Color.Lerp(Backgrounds[Phases[currPhase].Phase.ChangeBackground].color, Color.white, Time.deltaTime * 0.5f);
         }
     }
 
