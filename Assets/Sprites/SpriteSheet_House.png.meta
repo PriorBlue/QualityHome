@@ -835,6 +835,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: container
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 9
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032c0bb418d33f548b0e1133beb37c83
+      internalID: 1894916650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -876,6 +897,7 @@ TextureImporter:
       h_deco_1: -1044673364567137438
       h_stone_1: 3905423202031578681
       h_shingles_2: -8972720340578296428
+      container: 1894916650
       h_roof_1: -6583322582743983420
   spritePackingTag: 
   pSDRemoveMatte: 0
