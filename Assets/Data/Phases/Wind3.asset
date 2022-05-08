@@ -19,7 +19,7 @@ MonoBehaviour:
     Let''s see if it
     can defy the winds.'
   ShowPopup: 1
-  WindStrength: 3000
+  WindStrength: 2000
   Delay: 10
   Sound: {fileID: 8300000, guid: 853930535d3f1904891622e6d3f74c87, type: 3}
   BakeTiles: 1

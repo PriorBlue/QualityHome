@@ -16,7 +16,7 @@ MonoBehaviour:
   Title: The roof is missing, but it already looks like a home.
   Description: Let's see if it can defy the winds.
   ShowPopup: 1
-  WindStrength: -2500
+  WindStrength: -1800
   Delay: 10
   Sound: {fileID: 8300000, guid: 10b01a3e0466c4145907e7f6960ceb98, type: 3}
   BakeTiles: 1
