@@ -26,6 +26,8 @@ public class Spawner : MonoBehaviour
     public Button NextButton;
     public GameObject Popup;
 
+    public BoxCollider2D Container;
+
     [Header("Settings")]
     public Vector2 Size;
     public float Delay = 5f;
@@ -107,14 +109,18 @@ public class Spawner : MonoBehaviour
             {
                 endSpawn = Time.time;
 
-                if (Phases[currPhase].Phase.ShowPopup == true)
+                if (ContainerEmpty())
                 {
-                    NextButton.gameObject.SetActive(true);
+                    if (Phases[currPhase].Phase.ShowPopup == true)
+                    {
+                        NextButton.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        RateButton.gameObject.SetActive(true);
+                    }
                 }
-                else
-                {
-                    RateButton.gameObject.SetActive(true);
-                }
+
 
                 if (Phases[currPhase].Phase.BakeTiles == true)
                 {
@@ -164,6 +170,19 @@ public class Spawner : MonoBehaviour
 
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    private bool ContainerEmpty()
+    {
+        foreach (Tile tile in tiles)
+        {
+            if (Container.IsTouching(tile.GetComponent<Collider2D>()))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void SetPhase(int phase)
