@@ -1339,6 +1339,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764906823312349150, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2462687319115165448, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
         type: 3}
       propertyPath: m_Name
@@ -1484,5 +1514,15 @@ PrefabInstance:
       propertyPath: Backgrounds.Array.data[3]
       value: 
       objectReference: {fileID: 235670218}
+    - target: {fileID: 2462687320309565338, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885263073306032151, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3887632b5f7a77a45b45b8d1e0a229d2, type: 3}
