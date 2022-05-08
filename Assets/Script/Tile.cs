@@ -80,7 +80,7 @@ public class Tile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
             Body.angularVelocity = -MaxAngularMagnitude;
         }
 
-        if (isDragging && Body.velocity.magnitude >= 1000f && Time.time >= lastWoosh + 0.5f)
+        if (isDragging && Body.velocity.magnitude >= 20f && Time.time >= lastWoosh + 0.2f)
         {
             lastWoosh = Time.time;
 
