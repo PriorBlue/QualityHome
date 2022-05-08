@@ -1547,6 +1547,26 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 538765017
       objectReference: {fileID: 0}
+    - target: {fileID: 5159526319040822231, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159526319040822231, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159526319040822231, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33.630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159526319040822231, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 267.69
+      objectReference: {fileID: 0}
     - target: {fileID: 7086673641944355403, guid: 3887632b5f7a77a45b45b8d1e0a229d2,
         type: 3}
       propertyPath: m_Target.x

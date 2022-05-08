@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 144
+  m_Mass: 180
   m_LinearDrag: 0
   m_AngularDrag: 2
   m_GravityScale: 1
@@ -168,7 +168,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 303.371, y: 255.9424}
+  m_Target: {x: 429.371, y: 221.9424}
   m_AutoConfigureTarget: 1
   m_MaxForce: 100000
   m_DampingRatio: 1
