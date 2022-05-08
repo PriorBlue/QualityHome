@@ -8,51 +8,43 @@ public class PhotoMode : MonoBehaviour
     public GameObject orange;
     public GameObject blue;
     public GameObject pink;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    void SetSeason(GameObject season)
-    {
-        season.SetActive(true); 
-    }
-
+    public Spawner spawner;
+    public PhaseData finalphase;
     
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (spawner.GetCurrentPhase() == finalphase)
         {
-            SetSeason(green);
-            orange.SetActive(false);
-            blue.SetActive(false);
-            pink.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SetSeason(orange);
-            green.SetActive(false);
-            blue.SetActive(false);
-            pink.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SetSeason(blue);
-            green.SetActive(false);
-            orange.SetActive(false);
-            pink.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            SetSeason(pink);
-            green.SetActive(false);
-            orange.SetActive(false);
-            blue.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                green.SetActive(true);
+                orange.SetActive(false);
+                blue.SetActive(false);
+                pink.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                orange.SetActive(true);
+                green.SetActive(false);
+                blue.SetActive(false);
+                pink.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                blue.SetActive(true);
+                green.SetActive(false);
+                orange.SetActive(false);
+                pink.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                pink.SetActive(true);
+                green.SetActive(false);
+                orange.SetActive(false);
+                blue.SetActive(false);
+            }
         }
     }
 }
